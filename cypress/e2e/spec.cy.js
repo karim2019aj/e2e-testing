@@ -6,6 +6,9 @@ describe('template spec', () => {
     // Click on the account icon
     cy.get('.icon-account').click();
 
+    // wait for captcha to load
+    cy.wait(3000)
+    
     // Enter the username
     cy.get('#UserLoginDropdown').type('tnr_e2e_qstg@raja.fr');
 
